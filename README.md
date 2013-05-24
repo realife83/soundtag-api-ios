@@ -1,4 +1,4 @@
-Soundtag API iOS
+SoundTAG API iOS
 ================
 
 SoundTAG API
@@ -10,7 +10,6 @@ Getting Start
 
 Notes
 =====
-
 1. Please submit comments and questions to support@perples.com
 
 Examples
@@ -45,7 +44,7 @@ initialize
 - (void)receive:(int)code from:(NSString *)userKey with:(NSString *)context
 {
   if (code == 2000) {
-    NSLog(@"initialize successed");
+    NSLog(@"initialize succeed");
   } else {
     NSLog(@"initialize failed");
   }
