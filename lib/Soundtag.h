@@ -1,21 +1,19 @@
 //
-//  Playground.h
+//  Soundtag.h
 //
 //  Created by Sung-ho Song on 2013/05/10
 //  Copyright 2013 Perples, Inc All right reserved.
-//
 
 #import <Foundation/Foundation.h>
 
 
 @protocol SoundtagDelegate;
 
-
 @interface Soundtag: NSObject
 
-// initialize soundtag api
+// initialize SoundTAG api
 //
-// apiKey: key for launching a soundtag API (required)
+// apiKey: key for launching a SoundTAG API (required)
 //
 // delegate: asynchronous response delegator (required)
 //
@@ -27,7 +25,7 @@
 + (void)Init:(NSString *)apiKey with:(id<SoundtagDelegate>)delegate withUserKey:(NSString *)userKey ;
 
 
-// shutdown soundtag api
+// shutdown SoundTAG api
 + (void)TearDown;
 
 
@@ -35,7 +33,8 @@
 //
 // signal: a reserved long integer value that contains message less than 256 bytes
 // this signal can be retrieved from the api portal or the http api request(previously chosen fixed ip address)
-+ (void)Play:(long long)channel;
++ (void)Play:(long long)signal;
+
 
 // asynchronously catch the signal
 + (void)Listen:(id<SoundtagDelegate>)delegate;
